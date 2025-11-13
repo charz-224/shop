@@ -11,15 +11,21 @@ function getRandomNumber() {
   return Math.floor(Math.random() * 3) + 1;
 }
 
-advert.src='./assets/image_' + getRandomNumber() + '.jpg';
-document.getElementById('advert').innerHTML = ''
-document.getElementById('advert').appendChild(advert)
+setInterval(() => {
+  advert.src = './assets/image_' + getRandomNumber() + '.jpg';
+  document.getElementById('advert').innerHTML = ''
+  document.getElementById('advert').appendChild(advert)
+}, 3000)
 
-
+setTimeout(() => {
+  alert('Buy something!!!')
+}, 30000)
 
 // Need to add products to all image areas. 
 // Can also swithc products at intervals. 
 
-let product_1 = document.createElement('img');
-product_1.src='./assets/product_1.jpg'
-document.getElementById('container_1').appendChild(product_1);
+for (let i = 1; i < 10; i++){
+  let product = document.createElement('img');
+  product.src = './assets/product_' + i.toString() + '.jpg'
+  document.getElementById('container_' + i.toString()).appendChild(product);
+}
