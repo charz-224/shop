@@ -24,8 +24,14 @@ setTimeout(() => {
 // Need to add products to all image areas. 
 // Can also swithc products at intervals. 
 
-for (let i = 1; i < 10; i++){
+for (let i = 1; i < 7; i++){
   let product = document.createElement('img');
   product.src = './assets/product_' + i.toString() + '.jpg'
   document.getElementById('container_' + i.toString()).appendChild(product);
+}
+
+for (let i = 1; i < 5; i++){
+  let contact = document.createElement('img');
+  contact.src = './assets/contact_' + i.toString + '.jpg'
+  document.getElementById('contact_' + i.toString()).appendChild(contact);
 }
